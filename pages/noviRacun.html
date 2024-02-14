@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../images/Algebra-logo.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../pagesCSS/noviRacun.css">
+    <link rel="stylesheet" href="../modalStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novi racun</title>
+</head>
+<body>
+     <!-- NAVBAR -->
+     <nav class="navbar">
+        <div class="navbar-content">
+             <!--navbar hamburger-->
+             <span class="navbar-toggle" id="js-navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </span>
+            <div class="navbar-group left" id="js-menu">
+                <a id="prijavi-se" href="prijaviSe.html"><i class="fa fa-lock" aria-hidden="true"></i> Prijavi se</a>
+                <a id="pocetna" href="../index.html"><i class="fa fa-home" aria-hidden="true"></i> Početna</a>
+                <a id="o-nama" href="onama.html"><i class="fa fa-info" aria-hidden="true"></i> O nama</a>
+                <a id="novosti" href="novosti.html"><i class="fa fa-file-text" aria-hidden="true"></i> Novosti</a>
+                <a id="kontakt" href="#"><i class="fa fa-phone" aria-hidden="true"></i> Kontakt</a>
+            </div>
+            <div class="navbar-group right">
+                
+            </div>
+        </div>
+    </nav>
+    <!--PRIJAVA TITLE-->
+    <div class="title">
+        <h1 class="title-text">Kreirajte račun</h1>
+        <hr class="title-break-line"/>
+    </div>
+    <!--SIGN IN FORM-->
+    <div class="container">
+        <div class="center">
+            <h1>Novi račun</h1>
+            <form id="new-account-form" action="" method="POST">
+                <div class="txt_field">
+                    <input id="username"  type="text" name="text" required>
+                    <span></span>
+                    <label>Korisničko ime</label>
+                </div>
+                <div class="txt_field">
+                    <input id="password"  type="password" name="password" required>
+                    <span></span>
+                    <label>Lozinka</label>
+                </div>
+                <div class="txt_field">
+                    <input id="confirmPassword"  type="password" name="password" required>
+                    <span></span>
+                    <label>Potvrdite lozinku</label>
+                </div>
+                <input  name="submit" type="button" value="Kreirajte račun" onclick="submitForm()">
+                <div class="signup_link">
+                    Već imate račun ? <a href="prijaviSe.html">Prijavi se</a>
+                </div>
+            </form>
+        </div>
+      </div>
+      <script src="../scripts/noviRacunScript.js"></script>
+      <!--KONTAKT MODAL-->
+<div id="kontaktModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Kontaktirajte nas!</h2>
+        <form id="contactForm" action="https://www.fulek.com/mvc/supit/project-contact-form" method="POST">
+            <label for="FullName">Puno ime:</label>
+            <input type="text" id="FullName" name="FullName" required>
+
+            <label for="Email">E-mail:</label>
+            <input type="email" id="Email" name="Email" required>
+
+            <label for="Importance">Važnost poruke:</label>
+            <select id="Importance" name="Importance">
+                <option value="niska">Niska</option>
+                <option value="srednja">Srednja</option>
+                <option value="visoka">Visoka</option>
+            </select>
+
+            <label for="Message">Poruka:</label>
+            <textarea id="Message" name="Message" required></textarea>
+            <div class="checkbox-container">
+                <label for="ReceiveNewsletter" class="checkbox-label">
+                    <h5>Želim primati obavijesti <input type="checkbox" id="ReceiveNewsletter" name="ReceiveNewsletter"></h5>
+                </label>
+            </div>
+            
+
+            <button id="send-button" type="submit">Pošalji</button>
+            <button id="cancel-button" type="button" onclick="closeModal()">Otkaži</button>
+        </form>
+    </div>
+</div>
+<script src="/scripts/modal.js"></script>
+<script src="/scripts/whenLoggedIn.js"></script>
+<script src="/scripts/navbarSmallScreenToggle.js"></script>
+</body>
+</html>

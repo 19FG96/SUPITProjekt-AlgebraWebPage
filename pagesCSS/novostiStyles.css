@@ -1,0 +1,278 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: auto;
+    background-color: white;
+}
+
+
+
+/*NOVOSTI NAVBAR STYLES*/
+
+nav.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: black;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between; /* jedna grupa linkova lijevo druga desno */
+    width: 100%;
+}
+
+.navbar-group {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-group a {
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.navbar-group a:hover {
+    color: yellow;
+}
+
+.navbar-group a:active {
+    color: orange;
+}
+
+
+/* Responsive styles */
+@media only screen and (max-width: 800px) {
+    .navbar-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .navbar-group {
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+.fa-lock {
+    color: orange;
+}
+
+.fa-info {
+    color: blue;
+}
+
+.fa-phone {
+    color: crimson;
+}
+
+
+/*NAVBAR MEDIA QUERIES*/
+
+.navbar-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) {
+    .navbar-group {
+        display: none;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .navbar-group.active {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.navbar-toggle {
+    color: blue;
+}
+
+/* TITLES STYLES*/
+
+.title {
+    text-align: center;
+    position: relative;
+    left: 50%;
+    top: 60%; 
+    transform: translateX(-50%);
+    margin-top: 5%;
+}
+
+.title-text {
+    color: #000;
+    font-size: 28px;
+}
+
+.title-break-line {
+    border-top: 2px solid orange;
+    width: 0%;
+    margin: 0 auto;
+    animation-name: lineOut;
+    animation-delay: 0.1s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes lineOut {
+    from {width: 0%;}
+    to {width: 60%;}
+}
+
+
+
+/*CIRCLES STYLING*/
+
+.circle-container {
+    padding-top: 4%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: whitesmoke;
+    padding-bottom: 4%;
+}
+
+.circle {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-style: solid;
+    border-width: 100%;
+    border-color: rgb(138, 16, 16);
+    border-radius: 50%;
+    overflow: hidden;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+    background-color: gray;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.circle img {
+    width: 310%;
+    height: auto;
+    display: block;
+}
+
+.circle-text {
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    z-index: 1;
+}
+
+.circle:hover {
+    transform: scale(1.1);
+}
+
+
+.in-circle-header {
+    margin-top: 50%;
+    color: yellow;
+    text-shadow: 20%;
+    text-decoration: wavy;
+    font-size: 150%;
+}
+
+
+.circle-text {
+    font-size: 120%;
+    color: white;
+    padding-bottom: 50%;
+    font-weight: bold;
+}
+
+
+
+
+
+
+/*FOOTER*/
+
+footer {
+    background-image: url(../images/zaiskri-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#footer-text-one {
+    margin-top: 0.1%;
+    padding-top: 8%;
+    color: white;
+    font-size: 250%;
+}
+
+#footer-text-two {
+    color: crimson;
+    font-size: 300%;
+    padding-bottom: 8%;
+    margin-bottom: 0.1%;
+}
+
+
+
+/* Media Query for Mobile Screens */
+@media only screen and (max-width: 768px) {
+    .circle-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .circle {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    .circle img {
+        height: 200px;
+        width: auto;
+    }
+
+    .circle-text {
+        font-size: 100%;
+    }
+}
+
+
+
+/* Responsive styles */
+@media only screen and (max-width: 800px) {
+    .navbar-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .navbar-group {
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

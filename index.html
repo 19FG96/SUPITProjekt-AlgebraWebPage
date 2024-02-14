@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/images/Algebra-logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modalStyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algebra</title>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <div class="video-container">
+        <video autoplay muted loop>
+            <source src="videos/typingOnlaptop.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="navbar">
+            <nav class="navbar">
+                <div class="navbar">
+                    <a id="prijavi-se" href="pages/prijaviSe.html"><i class="fa fa-lock" aria-hidden="true"></i> Prijavi se</a>
+                    <a id="pocetna" href="#"><i class="fa fa-home" aria-hidden="true"></i> Početna</a>
+                    <a id="o-nama" href="pages/onama.html"><i class="fa fa-info" aria-hidden="true"></i> O nama</a>
+                    <a id="novosti" href="pages/novosti.html"><i class="fa fa-file-text" aria-hidden="true"></i> Novosti</a>
+                    <a id="kontakt" href="#"><i class="fa fa-phone" aria-hidden="true"></i> Kontakt</a>
+                </div>
+            </nav>
+        </div>
+        <div id="all-text" class="typing-animation">
+            <span id="typed-text"></span>
+            <span id="typed-text-line2" style="color: red;"></span>
+        </div>
+        <img id="fading-image" src="images/Algebra-logo.png" alt="Descriptive Text" style="display: none;">
+    <div class="picture-container">
+        <img src="images/Algebra-logo.png" alt="Responsive Image">
+    </div>
+    <div class="gradient-container-for-small-screens">
+        
+    </div>
+ </div>
+
+    <!--KONTAKT MODAL-->
+<div id="kontaktModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Kontaktirajte nas!</h2>
+        <form id="contactForm" action="https://www.fulek.com/mvc/supit/project-contact-form" method="POST">
+            <label for="FullName">Puno ime:</label>
+            <input type="text" id="FullName" name="FullName" required>
+
+            <label for="Email">E-mail:</label>
+            <input type="email" id="Email" name="Email" required>
+
+            <label for="Importance">Važnost poruke:</label>
+            <select id="Importance" name="Importance">
+                <option value="niska">Niska</option>
+                <option value="srednja">Srednja</option>
+                <option value="visoka">Visoka</option>
+            </select>
+
+            <label for="Message">Poruka:</label>
+            <textarea id="Message" name="Message" required></textarea>
+            <div class="checkbox-container">
+                <label for="ReceiveNewsletter" class="checkbox-label">
+                    <h5>Želim primati obavijesti <input type="checkbox" id="ReceiveNewsletter" name="ReceiveNewsletter"></h5>
+                </label>
+            </div>
+            
+
+            <button id="send-button" type="submit">Pošalji</button>
+            <button id="cancel-button" type="button" onclick="closeModal()">Otkaži</button>
+        </form>
+    </div>
+</div>
+<script src="/scripts/typingScript.js"></script>
+<script src="/scripts/whenLoggedInOnIndex.js"></script>
+<script src="/scripts/modal.js"></script>
+</body>
+</html>

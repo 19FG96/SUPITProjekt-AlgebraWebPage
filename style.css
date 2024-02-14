@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    background-color: black;
+}
+
+
+/*NAVBAR STYLES*/
+
+nav {
+    background-color: black;
+    overflow: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px;
+}
+
+.navbar a {
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.navbar a:hover {
+    color: yellow;
+}
+
+.navbar a:active {
+    color: orange;
+}
+
+
+@media only screen and (min-width: 801px) {
+    .picture-container {
+        display: none;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: flex-start;
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2px;
+    }
+}
+
+@media only screen and (min-width: 1001px) {
+    
+    .navbar {
+        display: flex;
+        justify-content: flex-start;
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3px;
+    }
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        margin: 5px 0;
+    }
+    .picture-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .picture-container img {
+        max-width: 100%;
+    }
+
+    video {
+        display: none;
+    }
+}
+
+
+.fa-lock {
+    color: orange;
+}
+
+.fa-info {
+    color: blue;
+}
+
+.fa-phone {
+    color: crimson;
+}
+
+
+/*VIDEO STYLES*/
+
+.video-container {
+    position: relative;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; 
+}
+
+
+
+/*TYPING ANIMATION*/
+
+.typing-animation {
+    position: absolute;
+    top: 500%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    z-index: 2;
+    white-space: nowrap; /* da je text u jednom redu */}
+
+.fade-out {
+    animation: fadeOut 3s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+

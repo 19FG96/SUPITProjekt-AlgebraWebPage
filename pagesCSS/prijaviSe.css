@@ -1,0 +1,320 @@
+Body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: auto;
+    background: linear-gradient(300deg, orange, #ff4c68, #ef8172);
+    background-size: 190% 1400%;
+    animation: gradient-animation 18s ease infinite;
+    background-repeat: no-repeat;
+}
+
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/*O NAMA NAVBAR STYLES*/
+
+nav.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: black;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between; /* jedna grupa linkova lijevo druga desno */
+    width: 100%;
+}
+
+.navbar-group {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-group a {
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.navbar-group a:hover {
+    color: yellow;
+}
+
+.navbar-group a:active {
+    color: orange;
+}
+
+.navbar-content a.icon {
+  display: none;
+}
+
+/* Responsive styles - OVO CENTRIRA HAMBURGER*/
+@media only screen and (max-width: 800px) {
+  .navbar-content {
+      flex-direction: column;
+      text-align: center;
+  }
+  .navbar-group {
+      justify-content: center; 
+      width: 100%; 
+      margin-bottom: 10px;
+  }
+}
+
+/*NAVBAR MEDIA QUERIES*/
+
+.navbar-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) {
+  .navbar-group {
+      display: none;
+  }
+
+  .navbar-toggle {
+      display: block;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .navbar-group.active {
+      display: flex;
+      flex-direction: column;
+  }
+}
+
+.navbar-toggle {
+  color: blue;
+}
+
+
+.fa-lock {
+    color: orange;
+}
+
+.fa-info {
+    color: blue;
+}
+
+.fa-phone {
+    color: crimson;
+}
+
+
+/*NAVBAR SMALL SCREEN STYLES*/
+
+.navbar-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) {
+  .navbar-group {
+      display: none;
+  }
+
+  .navbar-toggle {
+      display: block;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .navbar-group.active {
+      display: flex;
+      flex-direction: column;
+  }
+}
+
+
+
+
+/* TITLES STYLES*/
+
+.title {
+    text-align: center;
+    position: relative;
+    left: 50%;
+    top: 60%;
+    transform: translateX(-50%);
+    margin-top: 5%;
+}
+
+.title-text {
+    color: #000;
+    font-size: 28px;
+}
+
+.title-break-line {
+    border-top: 2px solid orange;
+    width: 0%;
+    margin: 0 auto;
+    animation-name: lineOut;
+    animation-delay: 0.1s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes lineOut {
+    from {width: 0%;}
+    to {width: 60%;}
+}
+
+
+
+
+/*LOG ION FORM*/
+/*Source:
+ https://www.codewithfaraz.com/content/6/create-a-pure-css-simple-login-page-html-and-css*/
+
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 29vw;
+    background: white;
+    border-radius: 10px;
+  }
+  
+  .center h1{
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+  }
+  
+  .center form{
+    padding: 0 40px;
+    box-sizing: border-box;
+  }
+  
+  form .txt_field{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+  }
+  
+  .txt_field input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+  }
+  
+  .txt_field label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+  }
+  
+  .txt_field span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0px;
+    height: 2px;
+    background: #2691d9;
+    transition: .5s;
+  }
+  
+  .txt_field input:focus ~ label,
+  .txt_field input:valid ~ label{
+    top: -5px;
+    color: #2691d9;
+  }
+  
+  .txt_field input:focus ~ span::before,
+  .txt_field input:Valid ~ span::before{
+    width: 100%;
+  }
+  
+  .pass{
+    margin: -5px 0 20px 5px;
+    color: #a6a6a6;
+    cursor: pointer;
+  }
+  
+  .pass:hover{
+    text-decoration: underline;
+  }
+  
+  input[type="Submit"]{
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+  
+  }
+  
+  input[type="Submit"]:hover{
+    background: #2691d9;
+    color: #e9f4fb;
+    transition: .5s;
+  }
+  
+  .signup_link{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+  }
+  
+  .signup_link a{
+    color: #2691d9;
+    text-decoration: none;
+  }
+  
+  .signup_link a:hover{
+    text-decoration: underline;
+  }
+  
+  .HomeAbout{
+    width: 100vw;
+    height: 25vh;
+  } 
+
+
+
+  /* Responsive styles */
+@media only screen and (max-width: 800px) {
+  .center{
+    position: relative;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    width: 80vw;
+    background: white;
+    border-radius: 10px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+}
+
+  
+
+
